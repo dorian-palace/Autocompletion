@@ -12,6 +12,14 @@ class Select
     }
 
 
+    public function startSearch($search){
+
+        $req = "SELECT nom from signe WHERE nom like '$search%'";
+        $req = $this->db->query($req);
+        $stmt = $req->fetchAll();
+        return $stmt;
+    }
+
     public function searchReq($search)
     {
 

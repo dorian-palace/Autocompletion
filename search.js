@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (value && value.trim().length > 0) {
             
             value = value.trim().toLowerCase()
-            console.log(searchInput.value)
+            // console.log(searchInput.value)
             
             let formData = new FormData()
             formData.append('search', searchInput.value) 
@@ -32,8 +32,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             return response.text();
             // return console.log(response)
             })
-            .then(function (response){
-                return response;
+            .then(response => {
+                return console.table(response)
+                // console.log()
             })
           
             
