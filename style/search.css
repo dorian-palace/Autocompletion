@@ -1,0 +1,6 @@
+.container_search{
+    display: flex;
+    justify-content: center;
+    /* padding:20%; */
+    margin: 25%;
+}
