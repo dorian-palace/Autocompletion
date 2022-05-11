@@ -15,7 +15,7 @@ class Select
     public function startSearch($search)
     {
 
-        $req = "SELECT nom from signe WHERE nom like '$search%'";
+        $req = "SELECT id, nom from signe WHERE nom like '$search%'";
         $req = $this->db->query($req);
         $stmt = $req->fetchAll();
         return $stmt;
@@ -28,11 +28,23 @@ class Select
         // var_dump($search);
         // echo "</pre>";
 
-        $req = "SELECT nom from signe WHERE nom LIKE '%$search%'";
+        $req = "SELECT id, nom from signe WHERE nom LIKE '%$search%'";
         $req = $this->db->query($req);
         $stmt = $req->fetchAll();
-        // echo (json_encode($stmt));
+        //echo (json_encode($stmt));
 
+        return $stmt;
+    }
+
+    public function getAll()
+    {
+        $id = $_GET['id'];
+        $req = "SELECT * from signe WHERE id = ?";
+        $req = $this->db->prepare($req);
+        $req->execute(array(
+            $id
+        ));
+        $stmt = $req->fetchAll();
         return $stmt;
     }
 }

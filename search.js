@@ -32,39 +32,55 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 .then(data => {
                     // console.log(data)
                     res.innerHTML = "";
-
                     let strStart = data.startResult;
                     let strAll = data.allResult;
+                    // console.log(strAll)
                     // console.table(strStart)
                     // console.table(strAll)
-
                     if (data.length !== 0) {
                         // console.log(data)
                         for (i = 0; i < strStart.length; i++) {
-
                             // console.table(strStart[i])
                             // console.table(strAll[i])
-                            const myJSON = JSON.stringify(strStart[i].nom); 
-                            // const myJsonName = myJSON.nom
-                            console.log(myJSON)
-                            res.innerHTML += "<li>" + myJSON + "</li>";
-                            // console.table(myJSON)
-                            // console.log(data)
-                            // console.log(res)
+                            const myJSONstart = JSON.stringify(strStart[i].nom);
+                            // console.log(myJSONstart)
+                            console.log(strStart[i].id)
+                            res.innerHTML += "<li><a href='element.php?id="+strStart[i].id+"'>" + myJSONstart + "</a></li>";
+
+
                         }
+
                     }
+                    if (data.length !== 0) {
+
+                        for (i = 0; i < strAll.length; i++) {
+
+                            const myJSONall = JSON.stringify(strAll[i].nom);
+                            // console.log(myJSONall)
+                            // console.log(strAll)
+                            console.log(strAll[i].id)
+
+                        res.innerHTML += "<li><a href='element.php?id="+strAll[i].id+"'>" + myJSONall + "</a></li>";
+                        }
+
+                    }
+
+
+
+
+
+
                 })
 
-        } else {
-
         }
+        // else {
+
+        // }
 
     })
 
     clear.addEventListener("click", () => {
 
     })
-
-
 
 })
