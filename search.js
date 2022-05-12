@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const form = document.querySelector('.form')
     const searchInput = document.querySelector('.input')
     const clear = document.getElementById('clear')
+    const submit = document.getElementById("submit")
     const url = 'traitement.php'
     res = document.getElementById("list");
 
@@ -42,44 +43,37 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         for (i = 0; i < strStart.length; i++) {
                             // console.table(strStart[i])
                             // console.table(strAll[i])
+
                             const myJSONstart = JSON.stringify(strStart[i].nom);
                             // console.log(myJSONstart)
-                            console.log(strStart[i].id)
-                            res.innerHTML += "<li><a href='element.php?id="+strStart[i].id+"'>" + myJSONstart + "</a></li>";
-
+                            // console.log(strStart[i].id)
+                            res.innerHTML += "<li><a href='element.php?id=" + strStart[i].id + "'>" + myJSONstart + "</a></li>";
 
                         }
 
                     }
                     if (data.length !== 0) {
-
                         for (i = 0; i < strAll.length; i++) {
-
-                            const myJSONall = JSON.stringify(strAll[i].nom);
-                            // console.log(myJSONall)
+                            
                             // console.log(strAll)
-                            console.log(strAll[i].id)
+                            const myJSONall = JSON.stringify(strAll[i].nom);
+                            // console.log(submit)
+                            // console.log(data)
+                            // submit.onclick.addEventListener(console.log(myJSONall))
+                                // callback(data)
+                                    // console.log(myJSONall)
+                                    // console.log(strAll)
+                                    // console.log(strAll[i].id)
 
-                        res.innerHTML += "<li><a href='element.php?id="+strAll[i].id+"'>" + myJSONall + "</a></li>";
+                                    res.innerHTML += "<li><a href='element.php?id=" + strAll[i].id + "'>" + myJSONall + "</a></li>";
+                               
                         }
 
                     }
 
-
-
-
-
-
                 })
 
         }
-        // else {
-
-        // }
-
-    })
-
-    clear.addEventListener("click", () => {
 
     })
 

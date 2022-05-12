@@ -33,9 +33,10 @@ $select = new Select();
 <body>
 
     <div class="form-container">
-        <form class="form" method="POST">
+        <form class="form" method="GET" action="recherche.php/?search=">
             <input name="search" id="search" type="text" class="input" placeholder="search..." />
-            <button id="clear" class="clear-results">clear</button>
+            <!-- <input type="submit" id="submit" name="submit" class="submit"> -->
+            <button type="submit" value="submit">submit</button>
         </form>
 
     </div>
