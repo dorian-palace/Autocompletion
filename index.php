@@ -22,10 +22,8 @@ $select = new Select();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/navbar.css">
-    <link rel="stylesheet" href="style/search.css"> -->
-    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/search.css">
+    <!-- <link rel="stylesheet" href="style/bootstrap.min.css"> -->
     <script src="search.js"></script>
     <title>Document</title>
 </head>
@@ -34,13 +32,13 @@ $select = new Select();
 
     <div class="form-container">
         <form class="form" method="GET" action="recherche.php/?search=">
-            <input name="search" id="search" type="text" class="input" placeholder="search..." />
+            <input name="search" id="search" type="text" class="input" placeholder="Ex : Cancer" />
             <!-- <input type="submit" id="submit" name="submit" class="submit"> -->
-            <button type="submit" value="submit">submit</button>
+            <button type="submit" value="submit">Find</button>
         </form>
 
     </div>
-    <div class="results-container>
+    <div class="results-container">
        <ul class=" results-list" id="list">
 
         </ul>

@@ -12,7 +12,7 @@ echo $res[0]["nom"];
 echo "<br>";
 echo "<br>";
 
-echo $res[0]['description']."<br>";
+echo "<p style='text-align: justify; padding: 100px;'>".$res[0]['description']."</p><br>";
 echo "<br>";
 
-echo "<img src='image/" . $res[0]['image'] ." '/>";
+echo "<img width='400px' style='margin-left: calc(50vw - 200px);' src='image/" . $res[0]['image'] ." '/><br><br>";

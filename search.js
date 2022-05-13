@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                     // console.log(strAll)
                                     // console.log(strAll[i].id)
 
-                                    res.innerHTML += "<li><a href='element.php?id=" + strAll[i].id + "'>" + myJSONall + "</a></li>";
+                                    // res.innerHTML += "<li><a href='element.php?id=" + strAll[i].id + "'>" + myJSONall + "</a></li>";
                                
                         }
 
