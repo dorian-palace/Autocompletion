@@ -30,16 +30,18 @@ $select = new Select();
 
 <body>
 
+    <h1>Astral Spoon</h1>
+
     <div class="form-container">
         <form class="form" method="GET" action="recherche.php/?search=">
             <input name="search" id="search" type="text" class="input" placeholder="Ex : Cancer" />
             <!-- <input type="submit" id="submit" name="submit" class="submit"> -->
-            <button type="submit" value="submit">Find</button>
+            <button type="submit" value="submit">Autres résultats</button>
         </form>
 
     </div>
     <div class="results-container">
-       <ul class=" results-list" id="list">
+        <ul class=" results-list" id="list">
 
         </ul>
     </div>

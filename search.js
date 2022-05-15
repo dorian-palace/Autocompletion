@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         //prend la valeur de ce qui est tapé dans la barre de recherche
         let value = e.target.value
+        // console.log(value)
 
         // check si la valeur entré est supérieur a 0
         if (value && value.trim().length > 0) {
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     // console.log(data)
                     res.innerHTML = "";
                     let strStart = data.startResult;
+                    // console.log(strStart)
                     let strAll = data.allResult;
                     // console.log(strAll)
                     // console.table(strStart)
